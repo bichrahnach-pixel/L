@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Katbghini?</title>
+<style>
+  body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    margin-top: 100px;
+  }
+
+  h1 {
+    color: #ff4d88;
+  }
+
+  .btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  #yes {
+    background-color: pink;
+    left: 55%;
+    top: 60%;
+  }
+
+  #no {
+    background-color: hotpink;
+    left: 40%;
+    top: 60%;
+  }
+</style>
+</head>
+<body>
+
+<h1>Katbghini? 🥺</h1>
+
+<button id="no" class="btn">La</button>
+<button id="yes" class="btn">Ah</button>
+
+<script>
+  const noBtn = document.getElementById("no");
+  const yesBtn = document.getElementById("yes");
+
+  // Move "La" button when mouse gets close
+  noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 100);
+
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+  });
+
+  // When clicking "Ah"
+  yesBtn.addEventListener("click", () => {
+    document.body.innerHTML = "<h1 style='color:hotpink;margin-top:100px;'>Woooow 😍</h1>";
+  });
+</script>
+
+</body>
+</html>
